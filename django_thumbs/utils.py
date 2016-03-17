@@ -44,8 +44,8 @@ def generate_thumbnail(img, thumb_size, format):
         # get minimum size
         minsize = min(xsize,ysize)
         # largest square possible in the image
-        xnewsize = (xsize-minsize)/2
-        ynewsize = (ysize-minsize)/2
+        xnewsize = int((xsize-minsize)/2)
+        ynewsize = int((ysize-minsize)/2)
         # crop it
         image = image.crop((xnewsize, ynewsize, xsize-xnewsize, ysize-ynewsize))
         # load is necessary after crop                
